@@ -1,7 +1,7 @@
 const axios = require('axios');
 const Event = require('../models/Events');
 
-const ML_SERVICE_URL = 'http://localhost:5001';
+const ML_SERVICE_URL = process.env.ML_SERVICE_URL || 'http://localhost:5001';
 
 
 const getPublishedEvents = async () => {

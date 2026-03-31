@@ -3,7 +3,7 @@ const Event = require('../models/Events');
 const fs = require('fs');
 const path = require('path');
 
-const CHATBOT_SERVICE_URL = 'http://localhost:5002';
+const CHATBOT_SERVICE_URL = process.env.CHATBOT_SERVICE_URL || 'http://localhost:5002';
 
 exports.chat = async (req, res) => {
   try {
