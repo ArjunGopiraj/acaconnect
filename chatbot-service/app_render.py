@@ -86,6 +86,25 @@ def build_event_context(event):
     context += f"Prize Pool: Rs.{event.get('prize_pool', 0):,}\nRegistration Fee: Rs.{event.get('registration_fee', 0)}\n"
     context += f"Expected Participants: {event.get('expected_participants', 'TBD')}\n"
     context += f"Tags: {', '.join(event.get('tags', []))}\n"
+    # Venue info
+    hosp = event.get('hospitality', {})
+    venue = event.get('venue') or hosp.get('venue_details', 'Not yet allocated')
+    context += f"Venue: {venue}\n"
+    if hosp.get('allocated_rooms'):
+        rooms = [f"{r.get('room_number','')} ({r.get('room_name','')})" for r in hosp['allocated_rooms']]
+        context += f"Rooms: {', '.join(rooms)}\n"
+    # Volunteer info
+    hr = event.get('hr', {})
+    volunteers = hr.get('allocated_volunteers', [])
+    if volunteers:
+        vol_list = [f"{v.get('volunteer_name','')} - {v.get('volunteer_role','')} ({v.get('volunteer_department','')})" for v in volunteers]
+        context += f"Volunteers: {', '.join(vol_list)}\n"
+    else:
+        context += "Volunteers: Not yet allocated\n"
+    judges = hr.get('allocated_judges', [])
+    if judges:
+        judge_list = [f"{j.get('judge_name','')} ({j.get('judge_designation','')})" for j in judges]
+        context += f"Judges: {', '.join(judge_list)}\n"
     return context
 
 def handle_specific_event(query):
@@ -143,7 +162,9 @@ def chat():
         return jsonify({"success": True, "query": user_query, "response": response})
     except Exception as e:
         print(f"Chat error: {e}")
-        return jsonify({"error": str(e), "message": "Failed to process chat request"}), 500
+        import traceback
+        traceback.print_exc()
+        return jsonify({"success": True, "query": data.get('query', ''), "response": "I'm having trouble processing that. Please try again."}), 200
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5002))
