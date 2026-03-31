@@ -196,8 +196,10 @@ def item_based_cf(user_interests, events_pool, top_k=5):
     results.sort(key=lambda x: x['similarity'], reverse=True)
     
     print(f"[CF] Total results before sorting: {len(results)}")
-    print(f"[CF] All scores: {[(event_map.get(r['event_id']), f"{r['similarity']:.3f}") for r in results]}")
-    print(f"[CF] Top {top_k} results: {[(event_map.get(r['event_id']), f"{r['similarity']:.3f}") for r in results[:top_k]]}")
+    all_scores = [(event_map.get(r['event_id']), round(r['similarity'], 3)) for r in results]
+    print(f"[CF] All scores: {all_scores}")
+    top_scores = [(event_map.get(r['event_id']), round(r['similarity'], 3)) for r in results[:top_k]]
+    print(f"[CF] Top {top_k} results: {top_scores}")
     return results[:top_k]
 
 def tag_based_fallback(user_interests, events_pool, top_k=5):
