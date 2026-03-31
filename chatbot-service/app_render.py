@@ -18,7 +18,7 @@ CORS(app)
 with open("data/niral_knowledge_simple.json", "r") as file:
     documents = json.load(file)
 
-db_connector = DatabaseConnector()
+db_connector = DatabaseConnector(os.environ.get('MONGODB_URI', 'mongodb://localhost:27017/college_events'))
 
 def get_event_by_name(query):
     events = db_connector.get_all_events()
