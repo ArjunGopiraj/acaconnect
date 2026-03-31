@@ -1,0 +1,11 @@
+flask
+flask-cors
+chromadb
+sentence-transformers
+pymongo
+python-dotenv
+requests
+groq
+numpy
+scikit-learn
+gunicorn
