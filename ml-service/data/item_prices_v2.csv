@@ -1,0 +1,57 @@
+category,item_name,unit,min_price,max_price,avg_price,notes
+Refreshments,Juice (per cup),per cup,8,12,10,Most common refreshment
+Refreshments,Water Bottle (500ml),per bottle,10,15,12,Standard 500ml
+Refreshments,Biscuit Packet (small),per packet,5,5,5,Small packet
+Refreshments,Tea,per cup,10,10,10,Standard tea
+Refreshments,Coffee,per cup,10,15,12,Standard coffee
+Refreshments,Snacks (chips/samosa),per piece,10,20,15,Chips or samosa or puff
+Disposables,Paper Cups (pack of 50),per pack,60,100,80,For refreshment serving
+Disposables,Paper Plates (pack of 50),per pack,80,150,115,For food serving
+Disposables,Napkins (pack of 100),per pack,60,120,90,Standard napkin pack
+Stationery,Pen (DOMS/ball pen),per piece,5,10,7,Basic ball pen
+Stationery,Pencil,per piece,3,5,4,Standard pencil
+Stationery,Eraser,per piece,3,5,4,Standard eraser
+Stationery,Sharpener,per piece,5,5,5,Basic sharpener
+Stationery,A4 Sheet (single),per sheet,2,2,2,Plain A4
+Stationery,Notepad (small),per piece,20,40,30,Small notepad
+Stationery,Chart Paper,per sheet,15,25,20,If used for display
+Stationery,Marker Pen,per piece,30,60,45,Whiteboard or permanent marker
+Stationery,Sketch Pen Set (10-12 colors),per set,60,120,90,For creative events
+Stationery,Glue Stick,per piece,20,40,30,Standard glue stick
+Stationery,Scissors,per piece,50,120,85,Standard scissors
+Stationery,Stapler,per piece,80,150,115,Standard stapler
+Stationery,Stapler Pins (box),per box,20,40,30,One box
+Stationery,Tape (cello),per roll,20,40,30,Standard cello tape
+Stationery,Masking Tape,per roll,40,80,60,For decoration or labeling
+Organization,Folder/File (for judges),per piece,20,50,35,Judge evaluation folder
+Organization,ID Card (printed),per piece,10,20,15,Participant or volunteer ID
+Organization,Lanyard,per piece,15,30,22,Neck lanyard for ID
+Organization,ID + Lanyard Combo,per person,25,40,32,Combined ID and lanyard
+Certificates,B/W Print Certificate,per certificate,3,5,4,Basic black and white
+Certificates,Color Print Certificate,per certificate,8,15,10,Recommended standard
+Goodies,Chocolate,per piece,10,20,15,Basic chocolate
+Goodies,Snack Combo,per person,30,50,40,Light snack combo
+Goodies,Dry Fruit Box (guest),per box,100,150,125,For chief guests only
+Goodies,Basic Goodie Kit,per person,40,80,60,Standard participant goodie
+Trophies,Medal,per piece,250,350,300,Participation or winner medal
+Trophies,Momento,per piece,250,300,275,For guests or judges
+Trophies,Trophy (1st Prize),per piece,500,700,600,Winner trophy
+Trophies,Trophy (2nd Prize),per piece,300,500,400,Runner-up trophy
+Trophies,Trophy (3rd Prize),per piece,200,300,250,Second runner-up trophy
+Event Materials,Banner (flex),per banner,800,1200,1000,Standard flex banner
+Event Materials,Decoration Materials,per event,500,1000,750,Balloons ribbons etc
+Event Materials,Poster Printing,per poster,10,20,15,A3 size poster
+Event Materials,Pamphlet,per piece,2,5,3,Flyer or pamphlet
+Event Materials,Standee (normal flex),per piece,800,1500,1150,Normal flex standee
+Event Materials,Standee (with frame),per piece,1500,2500,2000,Framed standee
+Event Materials,Backdrop (small),per piece,1500,3000,2250,Small stage backdrop
+Event Materials,Backdrop (large stage),per piece,3000,6000,4500,Full stage backdrop
+Inauguration,Cake (half kg),per piece,300,500,400,Small inauguration cake
+Inauguration,Cake (1 kg),per piece,600,900,700,Standard college event cake
+Inauguration,Ribbon (roll),per roll,30,100,65,For inauguration ceremony
+Inauguration,Name Plates (printed),per piece,30,100,65,Printed name plates
+Inauguration,Acrylic Name Plates,per piece,150,300,225,Premium acrylic name plates
+Logistics,Petrol (per trip),per trip,200,300,250,Local trip
+Logistics,Local Transport (overall),per event,1500,3000,2250,Full event transport
+Food,Meal (per person),per person,80,150,115,Full meal lunch or dinner
+Food,Snacks Meal (light),per person,40,80,60,Light snacks meal

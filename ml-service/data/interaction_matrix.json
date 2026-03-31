@@ -1,0 +1,350 @@
+{
+  "users": [
+    "2024179001@student.annauniv.edu",
+    "john.doe@example.com",
+    "jane.smith@example.com",
+    "mike.johnson@example.com",
+    "arjun.sharma@example.com",
+    "priya.patel@example.com",
+    "rahul.kumar@example.com",
+    "sneha.reddy@example.com",
+    "vikram.singh@example.com",
+    "rahul@gmail.com",
+    "jeeva@gmail.com",
+    "arya@gmail.com",
+    "sachin@gmail.com",
+    "surya@gmail.com",
+    "aryan123@gamil.com",
+    "arjun.sundar@test.com"
+  ],
+  "events": [
+    {
+      "id": "6977e66df51b849353f77a91",
+      "title": "SQL WAR",
+      "tags": [
+        "Database & SQL",
+        "Programming & Coding"
+      ]
+    },
+    {
+      "id": "6977e66df51b849353f77a94",
+      "title": "DEBUGGING WITH DSA",
+      "tags": [
+        "Debugging & Logic",
+        "DSA & Problem Solving",
+        "Programming & Coding"
+      ]
+    },
+    {
+      "id": "6977e66df51b849353f77a98",
+      "title": "TECHNICAL CONNECTIONS",
+      "tags": [
+        "Technical Quiz",
+        "Programming & Coding"
+      ]
+    },
+    {
+      "id": "6977e66df51b849353f77a9b",
+      "title": "UI/UX DEVELOPMENT",
+      "tags": [
+        "UI/UX Design",
+        "Web Development",
+        "Creative & Marketing"
+      ]
+    },
+    {
+      "id": "6977e66df51b849353f77a9e",
+      "title": "PITCH YOUR PROJECT CUM PRESENTATION",
+      "tags": [
+        "Project & Presentation",
+        "Communication & Voice",
+        "Creative & Marketing"
+      ]
+    },
+    {
+      "id": "6977e66df51b849353f77aa1",
+      "title": "TREASURE HUNT",
+      "tags": [
+        "Fun & Engagement",
+        "Management & Strategy"
+      ]
+    },
+    {
+      "id": "6977e66df51b849353f77aa4",
+      "title": "ANIME / CINEMA QUIZ",
+      "tags": [
+        "General Quiz",
+        "Fun & Engagement"
+      ]
+    },
+    {
+      "id": "6977e66df51b849353f77aa7",
+      "title": "IPL AUCTION",
+      "tags": [
+        "Management & Strategy",
+        "Fun & Engagement"
+      ]
+    },
+    {
+      "id": "6977e66df51b849353f77aaa",
+      "title": "ADZAP",
+      "tags": [
+        "Creative & Marketing",
+        "Communication & Voice",
+        "Fun & Engagement"
+      ]
+    },
+    {
+      "id": "6977e66df51b849353f77aad",
+      "title": "PHOTOGRAPHY CONTEST",
+      "tags": [
+        "Photography & Media",
+        "Creative & Marketing"
+      ]
+    },
+    {
+      "id": "699b58cba367f599365d3a77",
+      "title": "Choreo Night",
+      "tags": [
+        "Fun & Engagement",
+        "Communication & Voice",
+        "Photography & Media"
+      ]
+    },
+    {
+      "id": "699ca6d59d333cd727004642",
+      "title": "Tech Quiz Challenge",
+      "tags": []
+    }
+  ],
+  "interactions": [
+    {
+      "user": "2024179001@student.annauniv.edu",
+      "events": [
+        "6977e66df51b849353f77a91",
+        "6977e66df51b849353f77aa7",
+        "6977e66df51b849353f77aaa",
+        "699ca6d59d333cd727004642",
+        "699b58cba367f599365d3a77",
+        "6977e66df51b849353f77a94",
+        "6977e66df51b849353f77a98"
+      ]
+    },
+    {
+      "user": "john.doe@example.com",
+      "events": [
+        "6977e66df51b849353f77a91",
+        "6977e66df51b849353f77a9b",
+        "6977e66df51b849353f77aad",
+        "6977e66df51b849353f77aaa",
+        "6977e66df51b849353f77a9e"
+      ]
+    },
+    {
+      "user": "jane.smith@example.com",
+      "events": [
+        "6977e66df51b849353f77a91",
+        "6977e66df51b849353f77a9e",
+        "6977e66df51b849353f77a98",
+        "6977e66df51b849353f77aa7",
+        "6977e66df51b849353f77aa1"
+      ]
+    },
+    {
+      "user": "mike.johnson@example.com",
+      "events": [
+        "6977e66df51b849353f77a91",
+        "6977e66df51b849353f77aa1",
+        "6977e66df51b849353f77aa4",
+        "699b58cba367f599365d3a77",
+        "6977e66df51b849353f77aa7"
+      ]
+    },
+    {
+      "user": "arjun.sharma@example.com",
+      "events": [
+        "6977e66df51b849353f77a91",
+        "699ca6d59d333cd727004642",
+        "6977e66df51b849353f77a9b",
+        "6977e66df51b849353f77a9e",
+        "6977e66df51b849353f77a94"
+      ]
+    },
+    {
+      "user": "priya.patel@example.com",
+      "events": [
+        "6977e66df51b849353f77a91",
+        "6977e66df51b849353f77a94",
+        "699ca6d59d333cd727004642",
+        "6977e66df51b849353f77a98"
+      ]
+    },
+    {
+      "user": "rahul.kumar@example.com",
+      "events": [
+        "6977e66df51b849353f77a91",
+        "6977e66df51b849353f77a9b",
+        "6977e66df51b849353f77aad",
+        "6977e66df51b849353f77aaa",
+        "6977e66df51b849353f77a9e"
+      ]
+    },
+    {
+      "user": "sneha.reddy@example.com",
+      "events": [
+        "699ca6d59d333cd727004642",
+        "6977e66df51b849353f77a9e",
+        "6977e66df51b849353f77a98",
+        "6977e66df51b849353f77aa7",
+        "6977e66df51b849353f77aa4",
+        "6977e66df51b849353f77aa1"
+      ]
+    },
+    {
+      "user": "vikram.singh@example.com",
+      "events": [
+        "699ca6d59d333cd727004642",
+        "6977e66df51b849353f77aa1",
+        "6977e66df51b849353f77aa4",
+        "699b58cba367f599365d3a77",
+        "6977e66df51b849353f77aa7"
+      ]
+    },
+    {
+      "user": "rahul@gmail.com",
+      "events": [
+        "6977e66df51b849353f77a91",
+        "6977e66df51b849353f77a9b",
+        "6977e66df51b849353f77a9e",
+        "6977e66df51b849353f77a94",
+        "6977e66df51b849353f77a98"
+      ]
+    },
+    {
+      "user": "jeeva@gmail.com",
+      "events": [
+        "6977e66df51b849353f77a98",
+        "6977e66df51b849353f77aa1",
+        "6977e66df51b849353f77aa4",
+        "6977e66df51b849353f77a91",
+        "6977e66df51b849353f77a94",
+        "699ca6d59d333cd727004642"
+      ]
+    },
+    {
+      "user": "arya@gmail.com",
+      "events": [
+        "6977e66df51b849353f77a9b",
+        "699ca6d59d333cd727004642",
+        "6977e66df51b849353f77aad",
+        "6977e66df51b849353f77aaa",
+        "6977e66df51b849353f77a9e"
+      ]
+    },
+    {
+      "user": "sachin@gmail.com",
+      "events": [
+        "6977e66df51b849353f77aa1",
+        "6977e66df51b849353f77aa4",
+        "6977e66df51b849353f77aa7",
+        "6977e66df51b849353f77aad",
+        "6977e66df51b849353f77a9e",
+        "6977e66df51b849353f77a98"
+      ]
+    },
+    {
+      "user": "surya@gmail.com",
+      "events": [
+        "6977e66df51b849353f77a94",
+        "6977e66df51b849353f77a98",
+        "6977e66df51b849353f77aad",
+        "6977e66df51b849353f77aa1",
+        "6977e66df51b849353f77aa4",
+        "699b58cba367f599365d3a77"
+      ]
+    },
+    {
+      "user": "aryan123@gamil.com",
+      "events": [
+        "6977e66df51b849353f77a94",
+        "6977e66df51b849353f77a9b",
+        "6977e66df51b849353f77a9e",
+        "6977e66df51b849353f77a91",
+        "699ca6d59d333cd727004642",
+        "6977e66df51b849353f77a98"
+      ]
+    },
+    {
+      "user": "arjun.sundar@test.com",
+      "events": [
+        "6977e66df51b849353f77a91",
+        "6977e66df51b849353f77a9b",
+        "6977e66df51b849353f77a9e",
+        "6977e66df51b849353f77a94",
+        "6977e66df51b849353f77a98"
+      ]
+    }
+  ],
+  "coOccurrence": {
+    "IPL AUCTION + SQL WAR": 3,
+    "ADZAP + SQL WAR": 3,
+    "SQL WAR + Tech Quiz Challenge": 5,
+    "Choreo Night + SQL WAR": 2,
+    "DEBUGGING WITH DSA + SQL WAR": 7,
+    "SQL WAR + TECHNICAL CONNECTIONS": 7,
+    "ADZAP + IPL AUCTION": 1,
+    "IPL AUCTION + Tech Quiz Challenge": 3,
+    "Choreo Night + IPL AUCTION": 3,
+    "DEBUGGING WITH DSA + IPL AUCTION": 1,
+    "IPL AUCTION + TECHNICAL CONNECTIONS": 4,
+    "ADZAP + Tech Quiz Challenge": 2,
+    "ADZAP + Choreo Night": 1,
+    "ADZAP + DEBUGGING WITH DSA": 1,
+    "ADZAP + TECHNICAL CONNECTIONS": 1,
+    "Choreo Night + Tech Quiz Challenge": 2,
+    "DEBUGGING WITH DSA + Tech Quiz Challenge": 5,
+    "TECHNICAL CONNECTIONS + Tech Quiz Challenge": 5,
+    "Choreo Night + DEBUGGING WITH DSA": 2,
+    "Choreo Night + TECHNICAL CONNECTIONS": 2,
+    "DEBUGGING WITH DSA + TECHNICAL CONNECTIONS": 7,
+    "SQL WAR + UI/UX DEVELOPMENT": 6,
+    "PHOTOGRAPHY CONTEST + SQL WAR": 2,
+    "PITCH YOUR PROJECT CUM PRESENTATION + SQL WAR": 7,
+    "PHOTOGRAPHY CONTEST + UI/UX DEVELOPMENT": 3,
+    "ADZAP + UI/UX DEVELOPMENT": 3,
+    "PITCH YOUR PROJECT CUM PRESENTATION + UI/UX DEVELOPMENT": 7,
+    "ADZAP + PHOTOGRAPHY CONTEST": 3,
+    "PHOTOGRAPHY CONTEST + PITCH YOUR PROJECT CUM PRESENTATION": 4,
+    "ADZAP + PITCH YOUR PROJECT CUM PRESENTATION": 3,
+    "SQL WAR + TREASURE HUNT": 3,
+    "PITCH YOUR PROJECT CUM PRESENTATION + TECHNICAL CONNECTIONS": 6,
+    "IPL AUCTION + PITCH YOUR PROJECT CUM PRESENTATION": 3,
+    "PITCH YOUR PROJECT CUM PRESENTATION + TREASURE HUNT": 3,
+    "TECHNICAL CONNECTIONS + TREASURE HUNT": 5,
+    "IPL AUCTION + TREASURE HUNT": 5,
+    "ANIME / CINEMA QUIZ + SQL WAR": 2,
+    "ANIME / CINEMA QUIZ + TREASURE HUNT": 6,
+    "Choreo Night + TREASURE HUNT": 3,
+    "ANIME / CINEMA QUIZ + Choreo Night": 3,
+    "ANIME / CINEMA QUIZ + IPL AUCTION": 4,
+    "Tech Quiz Challenge + UI/UX DEVELOPMENT": 3,
+    "PITCH YOUR PROJECT CUM PRESENTATION + Tech Quiz Challenge": 4,
+    "DEBUGGING WITH DSA + UI/UX DEVELOPMENT": 4,
+    "DEBUGGING WITH DSA + PITCH YOUR PROJECT CUM PRESENTATION": 4,
+    "ANIME / CINEMA QUIZ + Tech Quiz Challenge": 3,
+    "TREASURE HUNT + Tech Quiz Challenge": 3,
+    "ANIME / CINEMA QUIZ + PITCH YOUR PROJECT CUM PRESENTATION": 2,
+    "ANIME / CINEMA QUIZ + TECHNICAL CONNECTIONS": 4,
+    "TECHNICAL CONNECTIONS + UI/UX DEVELOPMENT": 3,
+    "DEBUGGING WITH DSA + TREASURE HUNT": 2,
+    "ANIME / CINEMA QUIZ + DEBUGGING WITH DSA": 2,
+    "PHOTOGRAPHY CONTEST + Tech Quiz Challenge": 1,
+    "PHOTOGRAPHY CONTEST + TREASURE HUNT": 2,
+    "ANIME / CINEMA QUIZ + PHOTOGRAPHY CONTEST": 2,
+    "IPL AUCTION + PHOTOGRAPHY CONTEST": 1,
+    "PHOTOGRAPHY CONTEST + TECHNICAL CONNECTIONS": 2,
+    "DEBUGGING WITH DSA + PHOTOGRAPHY CONTEST": 1,
+    "Choreo Night + PHOTOGRAPHY CONTEST": 1
+  },
+  "generatedAt": "2026-03-01T09:45:09.532Z"
+}

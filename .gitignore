@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+
+# Environment files (contain secrets)
+.env
+
+# Uploaded files (user-generated content)
+backend/uploads/bills/
+backend/uploads/certificates/
+backend/uploads/designs/
+backend/uploads/events/
+backend/uploads/payment-screenshots/
+backend/uploads/photos/
+backend/src/uploads/certificates/
+
+# Large ML files (exceed GitHub 100MB limit)
+ml-service/data/it_events_processed.csv
+ml-service/model/budget_model.pkl
+
+# Vector databases (regeneratable)
+chatbot-service/vectorstore/
+chatbot-service/chroma_db/
+
+# SQLite database
+backend/database.sqlite
+
+# Log files
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/

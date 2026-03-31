@@ -1,0 +1,48 @@
+category,item_name,seed_name,unit,min_price,max_price,avg_price,per_participant,notes
+Refreshment,Water bottles,Water bottles,bottles,10,15,12,yes,500ml
+Refreshment,Tea,Tea,cups,10,10,10,yes,Per cup
+Refreshment,Coffee,Coffee,cups,10,15,12,yes,Per cup
+Refreshment,Milk,Milk,cups,15,20,17,yes,Per cup
+Refreshment,Biscuits,Biscuits,packets,5,10,7,yes,Small pack
+Refreshment,Samosa / Puff / Cutlet,Samosa / Puff / Cutlet,pieces,10,20,15,yes,Per piece
+Refreshment,Chips,Chips,packets,10,20,15,yes,Small packet
+Refreshment,Cake,Cake,pieces,600,900,750,no,Per kg - event level
+Refreshment,Fruit plates,Fruit plates,plates,30,50,40,yes,Per plate
+Refreshment,Banana,Banana / Apple / Orange,pieces,5,8,6,yes,Per piece
+Refreshment,Apple,Banana / Apple / Orange,pieces,20,30,25,yes,Per piece
+Refreshment,Orange,Banana / Apple / Orange,pieces,15,25,20,yes,Per piece
+Refreshment,Juice packets,Juice packets,packets,10,20,15,yes,Frooti/Maaza
+Refreshment,Packed snacks,Packed snacks,packets,20,40,30,yes,Combo
+Refreshment,Soft drinks,Soft drinks,bottles,20,40,30,yes,250-300ml
+Refreshment,Mineral water bottles,Mineral water bottles,bottles,15,20,17,yes,Standard
+Refreshment,Paper cups,Paper cups,pack_of_50,60,100,80,no,Pack of 50
+Refreshment,Disposable glasses,Disposable glasses,pack_of_50,80,120,100,no,Pack of 50
+Refreshment,Plates,Plates,pack_of_50,80,150,115,no,Pack of 50
+Refreshment,Tissues / Napkins,Tissues / Napkins,pack_of_100,60,120,90,no,Pack of 100
+Refreshment,Trash bags,Trash bags,pack,100,200,150,no,Per pack
+Stationery,A4 sheets,A4 sheets,sheets,2,2,2,yes,Per sheet
+Stationery,Chart papers,Chart papers,sheets,15,25,20,no,Per sheet
+Stationery,Sticky notes,Sticky notes,packs,30,80,55,no,Per pack
+Stationery,Pens,Pens,pieces,5,10,7,yes,Per piece
+Stationery,Pencils,Pencils,pieces,3,5,4,yes,Per piece
+Stationery,Erasers,Erasers,pieces,3,5,4,yes,Per piece
+Stationery,Sharpeners,Sharpeners,pieces,5,5,5,yes,Per piece
+Stationery,Highlighters,Highlighters,pieces,20,50,35,no,Per piece
+Stationery,Sketch pens,Sketch pens,sets,60,120,90,no,Per set
+Stationery,Permanent markers,Permanent markers,pieces,30,60,45,no,Per piece
+Stationery,Whiteboard markers,Whiteboard markers,pieces,40,80,60,no,Per piece
+Stationery,Correction pens,Correction pens,pieces,20,40,30,no,Per piece
+Stationery,Paper clips,Paper clips,boxes,20,40,30,no,Per box
+Stationery,Binder clips,Binder clips,boxes,40,80,60,no,Per box
+Stationery,Stapler,Stapler,pieces,80,150,115,no,Per piece
+Stationery,Staples,Staples,boxes,20,40,30,no,Per box
+Stationery,Glue sticks,Glue sticks,pieces,20,40,30,no,Per piece
+Stationery,Cellophane tape,Cellophane tape,rolls,20,40,30,no,Per roll
+Stationery,Double-sided tape,Double-sided tape,rolls,50,100,75,no,Per roll
+Stationery,Rubber bands,Rubber bands,packs,20,40,30,no,Per pack
+Stationery,Folders / Files,Folders / Files,pieces,20,50,35,no,Per piece
+Stationery,Envelopes,Envelopes,pieces,5,10,7,no,Per piece
+Stationery,Notepads,Notepads,pieces,20,50,35,yes,Per piece
+Stationery,Name slips / ID labels,Name slips / ID labels,sheets,2,5,3,yes,Per sheet
+Stationery,Attendance sheets,Attendance sheets,sheets,2,3,2,no,Per sheet
+Stationery,Evaluation sheets,Evaluation sheets,sheets,2,3,2,no,Per sheet

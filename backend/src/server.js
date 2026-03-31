@@ -1,0 +1,88 @@
+require("dotenv").config();
+const express = require("express");
+const cors = require("cors");
+const path = require("path");
+const connectDB = require("./config/db");
+
+const authRoutes = require("./routes/auth.routes");
+const participantAuthRoutes = require("./routes/participantAuth.routes");
+const eventRoutes = require("./routes/event.routes");
+const requirementRoutes = require("./routes/requirement.routes");
+const budgetRoutes = require("./routes/budget.routes");
+const notificationRoutes = require("./routes/notification.routes");
+const participantNotificationRoutes = require("./routes/participantNotification.routes");
+const adminRoutes = require("./routes/admin.routes");
+const mlRoutes = require("./routes/ml");
+const chatbotRoutes = require("./routes/chatbot.routes");
+const registrationRoutes = require("./routes/registration.routes");
+const stationeryRoutes = require("./routes/stationery.routes");
+const technicalRoutes = require("./routes/technical.routes");
+const refreshmentRoutes = require("./routes/refreshment.routes");
+const logisticsRoutes = require("./routes/logistics.routes");
+const hospitalityRoutes = require("./routes/hospitality.routes");
+const hrRoutes = require("./routes/hr.routes");
+const techopsRoutes = require("./routes/techops.routes");
+const onsiteRegistrationRoutes = require("./routes/onsiteRegistration.routes");
+const certificateRoutes = require("./routes/certificate.routes");
+const predicateRequirementRoutes = require("./routes/predicateRequirement.routes");
+const financialRoutes = require("./routes/financial.routes");
+const schedulingRoutes = require("./routes/scheduling.routes");
+const alumniRoutes = require("./routes/alumni.routes");
+const designRoutes = require("./routes/design.routes");
+const photoRoutes = require("./routes/photo.routes");
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+// Log all incoming requests
+app.use((req, res, next) => {
+  console.log(`${new Date().toISOString()} - ${req.method} ${req.url}`);
+  if (req.method === 'POST' && req.url.includes('/logistics/expense/')) {
+    console.log('EXPENSE SUBMISSION REQUEST RECEIVED!');
+    console.log('Headers:', req.headers);
+    console.log('Body keys:', Object.keys(req.body || {}));
+  }
+  next();
+});
+
+app.use('/uploads', express.static(path.join(__dirname, '..', 'uploads')));
+
+app.use("/auth", authRoutes);
+app.use("/participant-auth", participantAuthRoutes);
+app.use("/events", eventRoutes);
+app.use("/requirements", requirementRoutes);
+app.use("/budgets", budgetRoutes);
+app.use("/notifications", notificationRoutes);
+app.use("/participant-notifications", participantNotificationRoutes);
+app.use("/admin", adminRoutes);
+app.use("/ml", mlRoutes);
+app.use("/chatbot", chatbotRoutes);
+app.use("/registrations", registrationRoutes);
+app.use("/stationery", stationeryRoutes);
+app.use("/technical", technicalRoutes);
+app.use("/refreshments", refreshmentRoutes);
+app.use("/logistics", logisticsRoutes);
+app.use("/hospitality", hospitalityRoutes);
+app.use("/hr", hrRoutes);
+app.use("/techops", techopsRoutes);
+app.use("/onsite-registrations", onsiteRegistrationRoutes);
+app.use("/certificates", certificateRoutes);
+app.use("/requirements", predicateRequirementRoutes); // Predicate-based enhanced routes
+app.use("/financial", financialRoutes);
+app.use("/scheduling", schedulingRoutes);
+app.use("/alumni", alumniRoutes);
+app.use("/designs", designRoutes);
+app.use("/photos", photoRoutes);
+
+connectDB().then(() => {
+  const PORT = process.env.PORT || 5000;
+  app.listen(PORT, () => {
+    console.log(`Backend running on port ${PORT}`);
+    console.log('Environment:', process.env.NODE_ENV);
+    console.log('Razorpay Key ID:', process.env.RAZORPAY_KEY_ID ? 'Present' : 'Missing');
+  });
+}).catch(err => {
+  console.error('Database connection failed:', err);
+  process.exit(1);
+});

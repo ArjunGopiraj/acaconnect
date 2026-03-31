@@ -1,0 +1,31 @@
+exports.EVENT_STATUS = {
+  DRAFT: "DRAFT",
+  SUBMITTED: "SUBMITTED", 
+  UNDER_REVIEW: "UNDER_REVIEW",
+  TREASURER_APPROVED: "TREASURER_APPROVED",
+  GENSEC_APPROVED: "GENSEC_APPROVED",
+  CHAIRPERSON_APPROVED: "CHAIRPERSON_APPROVED",
+  PUBLISHED: "PUBLISHED",
+  REJECTED: "REJECTED",
+  CANCELLED: "CANCELLED"
+};
+
+// Legacy status mapping for backward compatibility
+exports.LEGACY_STATUS_MAP = {
+  CREATED: "DRAFT",
+  PENDING_TREASURER: "UNDER_REVIEW",
+  PENDING_GEN_SEC: "TREASURER_APPROVED",
+  GEN_SEC_APPROVED: "GENSEC_APPROVED",
+  PENDING_CHAIRPERSON: "GENSEC_APPROVED"
+};
+
+exports.EVENT_TYPES = [
+  "Hackathon",
+  "Technical Workshop",
+  "Quiz Competition",
+  "Cultural Event",
+  "Sports Event",
+  "Seminar",
+  "Conference",
+  "Other"
+];
