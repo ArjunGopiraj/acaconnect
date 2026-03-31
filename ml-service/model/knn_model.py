@@ -6,10 +6,13 @@ from sklearn.preprocessing import MinMaxScaler
 
 # Path setup
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_PATH = os.path.join(BASE_DIR, "..", "data", "it_events_processed.csv")
+DATA_FILE = os.environ.get('KNN_DATASET', 'it_events_processed.csv')
+DATA_PATH = os.path.join(BASE_DIR, "..", "data", DATA_FILE)
 
 # Load dataset
 df = pd.read_csv(DATA_PATH)
+if os.environ.get('SAMPLE_ROWS'):
+    df = df.sample(n=int(os.environ.get('SAMPLE_ROWS')), random_state=42).reset_index(drop=True)
 
 # Feature columns (all except event_id)
 feature_cols = [col for col in df.columns if col != "event_id"]
