@@ -16,7 +16,6 @@ backend/uploads/photos/
 backend/src/uploads/certificates/
 
 # Large ML files (regeneratable)
-ml-service/model/budget_model.pkl
 
 # Vector databases (regeneratable)
 chatbot-service/vectorstore/
