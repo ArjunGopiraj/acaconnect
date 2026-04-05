@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import importlib
 import sys
+import os
 
 # Force reload of cf_model on every request in debug mode
 if 'model.cf_model' in sys.modules:
@@ -11,6 +12,13 @@ from model.knn_model import create_student_vector, recommend_events, knn_model, 
 from model.cf_model import user_based_cf, item_based_cf, matrix_factorization_cf
 import numpy as np
 import pandas as pd
+import joblib
+
+# Load budget prediction model
+budget_data = joblib.load(os.path.join(os.path.dirname(__file__), 'model', 'budget_model.pkl'))
+budget_model = budget_data['model']
+budget_feature_cols = budget_data['feature_cols']
+budget_target_cols = budget_data['target_cols']
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for Node.js backend
@@ -362,9 +370,64 @@ def get_hybrid_cf_recommendations():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+EVENT_TYPE_MAP = {'Non-Technical': 0, 'Technical': 1, 'Hackathon': 2, 'Seminar': 3, 'Workshop': 4}
+
+@app.route('/predict-budget', methods=['POST'])
+def predict_budget():
+    """Predict budget breakdown for an event"""
+    try:
+        data = request.json
+        event_type = EVENT_TYPE_MAP.get(data.get('event_type', ''), 1)
+        features = {
+            'event_type': event_type,
+            'expected_participants': data.get('expected_participants', 50),
+            'duration_hours': data.get('duration_hours', 2),
+            'prize_pool': data.get('prize_pool', 0),
+            'refreshments_needed': int(data.get('refreshments_needed', False)),
+            'stationary_needed': int(data.get('stationary_needed', False)),
+            'goodies_needed': int(data.get('goodies_needed', False)),
+            'physical_certificate': int(data.get('physical_certificate', False)),
+            'trophies_needed': int(data.get('trophies_needed', False)),
+            'volunteers_needed': data.get('volunteers_needed', 0),
+            'rooms_needed': data.get('rooms_needed', 0),
+            'refreshment_item_count': data.get('refreshment_item_count', 0),
+            'stationery_item_count': data.get('stationery_item_count', 0)
+        }
+
+        input_df = pd.DataFrame([features], columns=budget_feature_cols)
+        prediction = budget_model.predict(input_df)[0]
+
+        breakdown = {}
+        for i, col in enumerate(budget_target_cols):
+            breakdown[col] = max(0, round(float(prediction[i])))
+
+        # Zero out predictions for disabled categories
+        if not features['refreshments_needed']:
+            breakdown['expense_refreshments'] = 0
+        if not features['stationary_needed']:
+            breakdown['expense_stationery'] = 0
+        if not features['goodies_needed']:
+            breakdown['expense_goodies'] = 0
+        if not features['physical_certificate']:
+            breakdown['expense_certificates'] = 0
+        if not features['trophies_needed']:
+            breakdown['expense_trophies'] = 0
+
+        # Recalculate total
+        breakdown['total_expense'] = sum(v for k, v in breakdown.items() if k != 'total_expense')
+
+        return jsonify({
+            'success': True,
+            'prediction': breakdown,
+            'input_features': features
+        })
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
 if __name__ == '__main__':
     print("ML Recommendation Service starting...")
     print("Loading KNN model and dataset...")
     print("Loading Collaborative Filtering model...")
+    print("Loading Budget Prediction model...")
     print("Service ready on http://localhost:5001")
     app.run(host='0.0.0.0', port=5001, debug=False)  # Disable debug to avoid module caching

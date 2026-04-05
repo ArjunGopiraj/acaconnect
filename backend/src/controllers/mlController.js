@@ -150,6 +150,38 @@ exports.getHybridCFRecommendations = async (req, res) => {
   }
 };
 
+exports.predictBudget = async (req, res) => {
+  try {
+    const { event_type, expected_participants, duration_hours, prize_pool, requirements } = req.body;
+
+    const payload = {
+      event_type: event_type || 'Technical',
+      expected_participants: expected_participants || 50,
+      duration_hours: duration_hours || 2,
+      prize_pool: prize_pool || 0,
+      refreshments_needed: requirements?.refreshments_needed || false,
+      stationary_needed: requirements?.stationary_needed || false,
+      goodies_needed: requirements?.goodies_needed || false,
+      physical_certificate: requirements?.physical_certificate || false,
+      trophies_needed: requirements?.trophies_needed || false,
+      volunteers_needed: requirements?.volunteers_needed || 0,
+      rooms_needed: requirements?.rooms_needed || 0,
+      refreshment_item_count: requirements?.refreshment_items?.length || 0,
+      stationery_item_count: requirements?.stationary_items?.length || 0
+    };
+
+    const response = await axios.post(`${ML_SERVICE_URL}/predict-budget`, payload);
+
+    if (response.data.success) {
+      return res.json(response.data);
+    }
+    throw new Error('Budget prediction failed');
+  } catch (error) {
+    console.error('Budget prediction error:', error.message);
+    res.status(500).json({ success: false, error: error.message });
+  }
+};
+
 exports.getRecommendations = async (req, res) => {
   try {
     const { interests } = req.body;
