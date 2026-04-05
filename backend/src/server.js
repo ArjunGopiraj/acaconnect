@@ -35,6 +35,14 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Ensure upload directories exist
+const fs = require('fs');
+const uploadDirs = ['uploads/events', 'uploads/bills', 'uploads/certificates', 'uploads/designs', 'uploads/photos', 'uploads/payment-screenshots'];
+uploadDirs.forEach(dir => {
+  const fullPath = path.join(__dirname, '..', dir);
+  if (!fs.existsSync(fullPath)) fs.mkdirSync(fullPath, { recursive: true });
+});
+
 // Log all incoming requests
 app.use((req, res, next) => {
   console.log(`${new Date().toISOString()} - ${req.method} ${req.url}`);
